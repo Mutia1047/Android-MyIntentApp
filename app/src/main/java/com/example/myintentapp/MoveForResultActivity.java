@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
-
+@SuppressWarnings("FieldCanBeLocal")
 public class MoveForResultActivity extends AppCompatActivity implements View.OnClickListener {
-    @SuppressWarnings("unused")
     private Button btnChoose;
     private RadioGroup rgNumber;
     public static String EXTRA_SELECTED_VALUE = "extra_selected_value";
@@ -18,7 +17,7 @@ public class MoveForResultActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_move_for_result);
-        Button btnChoose = (Button) findViewById(R.id.btn_choose);
+        btnChoose = (Button) findViewById(R.id.btn_choose);
         btnChoose.setOnClickListener(this);
         rgNumber = (RadioGroup)findViewById(R.id.rg_number);
     }
